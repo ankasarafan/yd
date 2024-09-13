@@ -1,0 +1,13 @@
+   name = "hijabtobrutindo"
+   type = "javascript"
+
+   account_id = "90cfbec2859c47daa57add9a5e26c955"  # Ganti dengan account_id Anda
+   workers_dev = true
+   compatibility_date = "2023-10-01"
+
+   [site]
+   bucket = "./"  # Direktori output build statis
+   entry-point = "workers-site"
+
+   [env.production]
+   pages_build_output_dir = "./"  # Direktori output build statis
