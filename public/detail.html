@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Detail</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mx-auto p-4" id="video-detail"></div>
+
+  <script>
+    async function fetchVideoDetail() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const fileCode = urlParams.get('file_code');
+      const response = await fetch(`https://sada.ditaleni007.workers.dev/filecode?file_code=${fileCode}`);
+      const html = await response.text();
+      document.getElementById('video-detail').innerHTML = html;
+    }
+
+    fetchVideoDetail();
+  </script>
+</body>
+</html>
