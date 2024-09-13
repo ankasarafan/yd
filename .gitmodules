@@ -1,0 +1,3 @@
+[submodule "hijabsange"]
+	path = hijabsange
+	url = git@github.com:ankasarafan/my-next-app-submodule.git
